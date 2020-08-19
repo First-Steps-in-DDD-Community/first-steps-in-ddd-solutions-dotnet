@@ -6,7 +6,7 @@ This is the starter project for the exercises in the "First Steps in Domain-Driv
 You should be able to fork and then clone this repo to get an almost-empty gradle project ready to work with.
 
 ## Pre-requisites
-* .NET Core SDK (at least .net standard 2.0)
+* .NET Core SDK (at least .net standard 2.1)
 * IDE of your choice
 * Git client (unless you already have one in your IDE)
 
