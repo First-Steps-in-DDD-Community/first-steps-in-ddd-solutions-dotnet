@@ -1,5 +1,5 @@
 # First Steps in Domain-Driven Design 
-![Build](https://github.com/andrewharmellaw/first-steps-in-ddd/workflows/Build/badge.svg) [![Known Vulnerabilities](https://snyk.io/test/github/andrewharmellaw/first-steps-in-ddd/badge.svg?targetFile=build.gradle)](https://snyk.io/test/github/andrewharmellaw/first-steps-in-ddd?targetFile=build.gradle)
+![Build](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions-dotnet/workflows/Build/badge.svg)
 
 This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course I'm currently writing.
 
