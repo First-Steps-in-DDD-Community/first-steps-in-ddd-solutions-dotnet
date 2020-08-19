@@ -8,12 +8,11 @@ namespace HarmelLaw.JusticeApp.Tests
         public ACriminalCase()
         {
             // constructor runs before each test
-            setup();
+            Setup();
         }
 
-        private void setup()
+        private void Setup()
         {
-            
         }
     }
 }

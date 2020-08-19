@@ -8,15 +8,15 @@ namespace HarmelLaw.JusticeApp.Tests
         public APreChargeDecision()
         {
             // constructor runs before each test
-            setup();
+            Setup();
         }
 
-        private void setup()
+        private void Setup()
         {
         }
 
         [Fact(Skip = "So the CI build stays green.  Remove this to get coding.")]
-        public void shouldRecordAlternativeOffenceAdviceAgainstSuspects()
+        public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
         {
             Assert.True(false);
         }

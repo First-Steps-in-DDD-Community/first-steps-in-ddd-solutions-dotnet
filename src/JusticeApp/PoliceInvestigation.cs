@@ -5,16 +5,18 @@ namespace HarmelLaw.JusticeApp
 {
     public class PoliceInvestigation
     {
-        public PNCId pncId;
-        public HashSet<Suspect> suspects = new HashSet<Suspect>();
+        public PNCId PNCId { get; set; }
+        public HashSet<Suspect> Suspects { get; set; }
 
         public PoliceInvestigation(PNCId pncId, Suspect suspect)
         {
             if (pncId == null) throw new ArgumentNullException("You must provide a PNC Id");
             if (suspect == null) throw new ArgumentNullException("You must provide a suspect");
 
-            this.pncId = pncId;
-            this.suspects.Add(suspect);
+            Suspects = new HashSet<Suspect>();
+            
+            PNCId = pncId;
+            Suspects.Add(suspect);
         }
     }
 }

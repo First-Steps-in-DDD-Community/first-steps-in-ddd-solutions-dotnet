@@ -4,11 +4,11 @@ namespace HarmelLaw.JusticeApp
 {
     public class PNCId
     {
-        public readonly string value;
+        public string Value { get; private set; }
 
-        public PNCId(String value)
+        public PNCId(string value)
         {
-            this.value = value;
+            Value = value;
         }
     }
 }

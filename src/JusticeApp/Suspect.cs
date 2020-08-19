@@ -4,11 +4,11 @@ namespace HarmelLaw.JusticeApp
 {
     public class Suspect
     {
-        private readonly CriminalOffence offence;
+        private readonly CriminalOffence _offence;
 
         public Suspect(CriminalOffence offence)
         {
-            this.offence = offence;
+            _offence = offence;
         }
     }
 }

@@ -5,42 +5,42 @@ namespace HarmelLaw.JusticeApp.Tests
 {
     public class APoliceInvestigation
     {
-        PNCId pncId;
-        Suspect suspect;
-        PoliceInvestigation anInvestigation;
+        private PNCId _pncId;
+        private Suspect _suspect;
+        private PoliceInvestigation _anInvestigation;
 
         public APoliceInvestigation()
         {
             // constructor runs before each test
-            setup();
+            Setup();
         }
 
-        private void setup()
+        private void Setup()
         {
-            pncId = new PNCId("1234-ESDT");
-            suspect = new Suspect(CriminalOffence.FALSE_ACCOUNTING);
-            anInvestigation = new PoliceInvestigation(pncId, suspect);
-        }
-
-        [Fact]
-        public void mustHaveAPoliceNationalComputerId()
-        {
-            Assert.NotNull(anInvestigation.pncId);
+            _pncId = new PNCId("1234-ESDT");
+            _suspect = new Suspect(CriminalOffence.FALSE_ACCOUNTING);
+            _anInvestigation = new PoliceInvestigation(_pncId, _suspect);
         }
 
         [Fact]
-        public void cannotBeCreatedWithAnEmptyPoliceNationalComputerId()
+        public void MustHaveAPoliceNationalComputerId()
         {
-            Action action = () => new PoliceInvestigation(null, suspect);
+            Assert.NotNull(_anInvestigation.PNCId);
+        }
+
+        [Fact]
+        public void CannotBeCreatedWithAnEmptyPoliceNationalComputerId()
+        {
+            Action action = () => new PoliceInvestigation(null, _suspect);
             Exception exception = Assert.Throws<ArgumentNullException>(action);
 
             Assert.Contains("You must provide a PNC Id", exception.Message);
         }
 
         [Fact]
-        public void cannotBeCreatedWithNoSuspect()
+        public void CannotBeCreatedWithNoSuspect()
         {
-            Action action = () => new PoliceInvestigation(pncId, null);
+            Action action = () => new PoliceInvestigation(_pncId, null);
             Exception exception = Assert.Throws<ArgumentNullException>(action);
             
             Assert.Contains("You must provide a suspect", exception.Message);
