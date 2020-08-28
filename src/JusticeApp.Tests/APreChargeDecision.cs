@@ -15,10 +15,16 @@ namespace HarmelLaw.JusticeApp.Tests
         {
         }
 
-        [Fact(Skip = "So the CI build stays green.  Remove this to get coding.")]
+        [Fact]
         public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
         {
-            Assert.True(false);
+            Suspect suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
+            PreChargeDecision aPreChargeDecision = new PreChargeDecision();
+            OffenceAdvice offenceAdvice = new OffenceAdvice();
+
+            aPreChargeDecision.RecordAlternativeOffenceAdvice(suspect, offenceAdvice);
+
+            Assert.Equal(offenceAdvice, aPreChargeDecision.GetOffenceAdviceFor(suspect));
         }
     }
 }
