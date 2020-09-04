@@ -5,6 +5,10 @@ namespace HarmelLaw.JusticeApp.Tests
 {
     public class APreChargeDecision
     {
+        private Suspect _suspect;
+        private PreChargeDecision _aPreChargeDecision;
+        private OffenceAdvice _offenceAdvice;
+
         public APreChargeDecision()
         {
             // constructor runs before each test
@@ -13,18 +17,17 @@ namespace HarmelLaw.JusticeApp.Tests
 
         private void Setup()
         {
+            _suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
+            _aPreChargeDecision = new PreChargeDecision();
+            _offenceAdvice = new OffenceAdvice();
         }
 
         [Fact]
         public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
         {
-            Suspect suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-            PreChargeDecision aPreChargeDecision = new PreChargeDecision();
-            OffenceAdvice offenceAdvice = new OffenceAdvice();
+            _aPreChargeDecision.RecordAlternativeOffenceAdvice(_suspect, _offenceAdvice);
 
-            aPreChargeDecision.RecordAlternativeOffenceAdvice(suspect, offenceAdvice);
-
-            Assert.Equal(offenceAdvice, aPreChargeDecision.GetOffenceAdviceFor(suspect));
+            Assert.Equal(_offenceAdvice, _aPreChargeDecision.GetOffenceAdviceFor(_suspect));
         }
     }
 }
