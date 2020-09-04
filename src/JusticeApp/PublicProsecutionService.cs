@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using HarmelLaw.JusticeApp.Investigation;
 using HarmelLaw.JusticeApp.Preparation;
 
@@ -6,9 +7,9 @@ namespace HarmelLaw.JusticeApp
 {
     public class PublicProsecutionService
     {
-        public PreChargeDecisionCase ReceiveRequestForPreChargeDecision(PoliceInvestigation policeInvestigation)
+        public PreChargeDecisionCase ReceiveRequestForPreChargeDecision(PoliceInvestigationDetails policeInvestigationDetails)
         {
-            return new PreChargeDecisionCase(policeInvestigation.PNCId, policeInvestigation.Suspects);
+            return new PreChargeDecisionCase(policeInvestigationDetails.PNCId, new HashSet<Suspect>(policeInvestigationDetails.Suspects));
         }
 
         public CriminalCase AcceptCaseFile(PoliceCaseFile policeCaseFile)

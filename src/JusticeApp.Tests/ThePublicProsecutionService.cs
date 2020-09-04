@@ -10,7 +10,7 @@ namespace HarmelLaw.JusticeApp.Tests
         private PublicProsecutionService _thePps;
         private PNCId _pncId;
         private Suspect _suspect;
-        private PoliceInvestigation _policeInvestigation;
+        private PoliceInvestigationDetails _policeInvestigationDetails;
 
         public ThePublicProsecutionService()
         {
@@ -23,16 +23,16 @@ namespace HarmelLaw.JusticeApp.Tests
             _thePps = new PublicProsecutionService();
             _pncId = new PNCId("AN-ID");
             _suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-            _policeInvestigation = new PoliceInvestigation(_pncId, _suspect);
+            _policeInvestigationDetails = new PoliceInvestigationDetails(_pncId, _suspect);
         }
 
         [Fact]
         public void ShouldCreateAPreChargeDecisionWhenReceivingAPcdRequest()
         {
-            PreChargeDecisionCase pcdCase = _thePps.ReceiveRequestForPreChargeDecision(_policeInvestigation);
+            PreChargeDecisionCase pcdCase = _thePps.ReceiveRequestForPreChargeDecision(_policeInvestigationDetails);
 
             Assert.Equal(_pncId, pcdCase.PNCId);
-            Assert.Equal(_policeInvestigation.Suspects, pcdCase.GetSuspects());
+            Assert.Equal(_policeInvestigationDetails.Suspects, pcdCase.GetSuspects());
         }
 
         [Fact]
