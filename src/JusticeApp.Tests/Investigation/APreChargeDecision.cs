@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using HarmelLaw.JusticeApp.Investigation;
+using System.Collections.Generic;
 
 namespace HarmelLaw.JusticeApp.Tests.Investigation
 {
@@ -9,6 +10,7 @@ namespace HarmelLaw.JusticeApp.Tests.Investigation
         private Suspect _suspect;
         private PreChargeDecision _aPreChargeDecision;
         private OffenceAdvice _offenceAdvice;
+        private HashSet<Suspect> _suspects;
 
         public APreChargeDecision()
         {
@@ -18,8 +20,11 @@ namespace HarmelLaw.JusticeApp.Tests.Investigation
 
         private void Setup()
         {
+            PNCId pncId = new PNCId("ANOTHER_PNC_ID");
             _suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-            _aPreChargeDecision = new PreChargeDecision();
+            _suspects = new HashSet<Suspect>();
+            _suspects.Add(_suspect);
+            _aPreChargeDecision = new PreChargeDecision(pncId, _suspects);
             _offenceAdvice = new OffenceAdvice();
         }
 

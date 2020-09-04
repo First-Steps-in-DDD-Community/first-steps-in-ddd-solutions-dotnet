@@ -5,9 +5,9 @@ namespace HarmelLaw.JusticeApp
 {
     public class PublicProsecutionService
     {
-        public CriminalCase ReceiveRequestForPreChargeDecision(PoliceInvestigation policeInvestigation)
+        public PreChargeDecision ReceiveRequestForPreChargeDecision(PoliceInvestigation policeInvestigation)
         {
-            return new CriminalCase(policeInvestigation.PNCId, policeInvestigation.Suspects);
+            return new PreChargeDecision(policeInvestigation.PNCId, policeInvestigation.Suspects);
         }
 
         public CriminalCase AcceptCaseFile(PoliceCaseFile policeCaseFile)
