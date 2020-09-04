@@ -5,8 +5,8 @@ namespace HarmelLaw.JusticeApp.Preparation
 {
     public class PoliceCaseFile
     {
-        public PNCId PNCId { get; set; }
-        public HashSet<Defendant> Defendants { get; set; }
+        public PNCId PNCId { get; }
+        public HashSet<Defendant> Defendants { get; }
 
         public PoliceCaseFile(PNCId pncId, Defendant defendant)
         {
