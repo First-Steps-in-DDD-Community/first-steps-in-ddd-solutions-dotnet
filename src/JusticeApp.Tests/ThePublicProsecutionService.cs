@@ -29,7 +29,7 @@ namespace HarmelLaw.JusticeApp.Tests
         [Fact]
         public void ShouldCreateAPreChargeDecisionWhenReceivingAPcdRequest()
         {
-            PreChargeDecision pcdCase = _thePps.ReceiveRequestForPreChargeDecision(_policeInvestigation);
+            PreChargeDecisionCase pcdCase = _thePps.ReceiveRequestForPreChargeDecision(_policeInvestigation);
 
             Assert.Equal(_pncId, pcdCase.PNCId);
             Assert.Equal(_policeInvestigation.Suspects, pcdCase.GetSuspects());
