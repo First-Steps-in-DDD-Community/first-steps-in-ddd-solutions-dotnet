@@ -1,7 +1,8 @@
 using System;
 using Xunit;
+using HarmelLaw.JusticeApp.Investigation;
 
-namespace HarmelLaw.JusticeApp.Tests
+namespace HarmelLaw.JusticeApp.Tests.Investigation
 {
     public class APoliceInvestigation
     {

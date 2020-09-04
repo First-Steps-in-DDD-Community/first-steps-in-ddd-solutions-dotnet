@@ -1,4 +1,5 @@
 using System;
+using HarmelLaw.JusticeApp.Investigation;
 
 namespace HarmelLaw.JusticeApp
 {
