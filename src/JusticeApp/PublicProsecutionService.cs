@@ -9,5 +9,10 @@ namespace HarmelLaw.JusticeApp
         {
             return new CriminalCase(policeInvestigation.PNCId, policeInvestigation.Suspects);
         }
+
+        public CriminalCase AcceptCaseFile(PoliceCaseFile policeCaseFile)
+        {
+            return new CriminalCase(policeCaseFile.PNCId, policeCaseFile.Defendants);
+        }
     }
 }

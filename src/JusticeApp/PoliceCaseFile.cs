@@ -1,19 +1,18 @@
 using System;
 using System.Collections.Generic;
-using HarmelLaw.JusticeApp.Investigation;
 
 namespace HarmelLaw.JusticeApp
 {
-    public class CriminalCase
+    public class PoliceCaseFile
     {
         public PNCId PNCId { get; set; }
-        public HashSet<Suspect> Suspects { get; set; }
         public HashSet<Defendant> Defendants { get; set; }
 
-        public CriminalCase(PNCId pncId, HashSet<Defendant> defendants)
+        public PoliceCaseFile(PNCId pncId, Defendant defendant)
         {
             PNCId = pncId;
-            Defendants = defendants;
+            Defendants = new HashSet<Defendant>();
+            Defendants.Add(defendant);
         }
     }
 }
