@@ -10,7 +10,7 @@ package Investigation {
     class PoliceInvestigation {
     }
 
-    class PreChargeDecision {
+    class PreChargeDecisionCase {
     }
 
     class Suspect {
@@ -18,20 +18,22 @@ package Investigation {
 
 }
 
-class CriminalCase {
-}
+package Preparation {
+    class CriminalCase {
+    }
 
-class Defendant {
+    class Defendant {
+    }
+
+    class PoliceCaseFile {
+    }
 }
 
 class PNCId {
 }
 
-class PoliceCaseFile {
-}
-
 class PublicProsecutionService {
-    CriminalCase ReceiveRequestForPreChargeDecision (PoliceInvestigation)
+    PreChargeDecisionCase ReceiveRequestForPreChargeDecision (PoliceInvestigation)
     CriminalCase AcceptCaseFile (PoliceCaseFile)
 }
 
@@ -44,6 +46,10 @@ PoliceCaseFile *-- Defendant
 PoliceInvestigation *-- "*" Suspect
 
 PoliceInvestigation *-- "*" PNCId
+
+PreChargeDecisionCase *-- "*" Suspect
+
+PreChargeDecisionCase *-- "*" OffenceAdvice
 
 CriminalCase *-- "*" Defendant
 
