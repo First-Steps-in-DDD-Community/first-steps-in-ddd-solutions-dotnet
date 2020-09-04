@@ -21,16 +21,30 @@ package Investigation {
 class CriminalCase {
 }
 
+class Defendant {
+}
+
 class PNCId {
 }
 
+class PoliceCaseFile {
+}
+
 class PublicProsecutionService {
+    CriminalCase ReceiveRequestForPreChargeDecision (PoliceInvestigation)
+    CriminalCase AcceptCaseFile (PoliceCaseFile)
 }
 
 Suspect *-- "*" CriminalOffence
 
+PoliceCaseFile *-- PNCId
+
+PoliceCaseFile *-- Defendant
+
 PoliceInvestigation *-- "*" Suspect
 
 PoliceInvestigation *-- "*" PNCId
+
+CriminalCase *-- "*" Defendant
 
 @enduml
