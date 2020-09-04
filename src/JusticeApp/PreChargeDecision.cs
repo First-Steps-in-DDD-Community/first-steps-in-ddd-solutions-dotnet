@@ -9,11 +9,12 @@ namespace HarmelLaw.JusticeApp
 
         public void RecordAlternativeOffenceAdvice(Suspect suspect, OffenceAdvice advice)
         {
+            _offenceAdvice.Add(suspect, advice);
         }
 
         public OffenceAdvice GetOffenceAdviceFor(Suspect suspect)
         {
-            return null;
+            return _offenceAdvice[suspect];
         }
 
     }
