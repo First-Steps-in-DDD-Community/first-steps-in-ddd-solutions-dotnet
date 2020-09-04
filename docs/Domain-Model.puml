@@ -2,22 +2,29 @@
 hide empty members
 hide empty methods
 
-class CriminalCase {
+package Investigation {
+
+    class CriminalOffence {
+    }
+
+    class PoliceInvestigation {
+    }
+
+    class PreChargeDecision {
+    }
+
+    class Suspect {
+    }
+
 }
 
-class CriminalOffence {
+class CriminalCase {
 }
 
 class PNCId {
 }
 
-class PoliceInvestigation {
-}
-
-class PreChargeDecision {
-}
-
-class Suspect    {
+class PublicProsecutionService {
 }
 
 Suspect *-- "*" CriminalOffence
