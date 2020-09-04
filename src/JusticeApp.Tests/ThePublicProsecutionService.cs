@@ -33,5 +33,17 @@ namespace HarmelLaw.JusticeApp.Tests
             Assert.Equal(_pncId, policeCase.PNCId);
             Assert.Equal(_policeInvestigation.Suspects, policeCase.Suspects);
         }
+
+        [Fact]
+        public void ShouldCreateACriminalCaseWhenAPoliceCaseFileIsAccepted()
+        {
+            Defendant defendant = new Defendant();
+            PoliceCaseFile policeCaseFile = new PoliceCaseFile(_pncId, defendant);
+
+            CriminalCase criminalCase = _thePps.AcceptCaseFile(policeCaseFile);
+
+            Assert.Equal(_pncId, criminalCase.PNCId);
+            Assert.Equal(policeCaseFile.Defendants, criminalCase.Defendants);
+        }
     }
 }
