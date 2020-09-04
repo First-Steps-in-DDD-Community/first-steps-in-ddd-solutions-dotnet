@@ -1,5 +1,6 @@
 using System;
 using HarmelLaw.JusticeApp.Investigation;
+using HarmelLaw.JusticeApp.Preparation;
 using Xunit;
 
 namespace HarmelLaw.JusticeApp.Tests
