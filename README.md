@@ -3,7 +3,7 @@
 
 This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course I'm currently writing.
 
-You should be able to fork and then clone this repo to get an almost-empty gradle project ready to work with.
+You should be able to fork and then clone this repo to get an almost-empty .NET project ready to work with.
 
 ## Pre-requisites
 * .NET Core SDK (at least .net standard 2.1)
