@@ -1,9 +1,9 @@
-# First Steps in Domain-Driven Design 
+# First Steps in Domain-Driven Design - C# Solution
 ![Build](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions-dotnet/workflows/Build/badge.svg)
 
-This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course I'm currently writing.
+This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course for O'Reilly.  If you are more of a Java person, take a look at the [Java version of this codebase](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions/blob/main/README.md).
 
-You should be able to fork and then clone this repo to get an almost-empty gradle project ready to work with.
+You should be able to fork and then clone this repo to get an almost-empty .NET project ready to work with.
 
 ## Pre-requisites
 * .NET Core SDK (at least .net standard 2.1)
